@@ -50,7 +50,7 @@ export default function Hero({ isDark, cardBg, borderClass, onSectionClick }: He
               download="Avinash_Kumar.pdf"
               className={"inline-flex items-center gap-2 rounded-xl border px-6 py-3.5 font-semibold transition hover:-translate-y-0.5 " + (isDark ? "border-slate-700 bg-slate-900/50 hover:border-slate-500" : "border-slate-300 bg-white hover:border-slate-400")}
             >
-              <Download size={18} /> Download résumé
+              <Download size={18} /> Download resume
             </a>
           </div>
 
