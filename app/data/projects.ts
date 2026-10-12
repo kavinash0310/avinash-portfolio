@@ -1,38 +1,42 @@
 export const projects = [
-    {
-        title: "Smart Expense Tracker",
-        description:
-          "A full-stack personal finance and expense management platform with secure authentication, analytics dashboard, Kafka-based notification service, and mock bank integration. Built with Angular and Spring Boot, supporting category-wise expense tracking, reporting, waitlist-based event flows, and rule-driven booking logic.",
-        tech: ["Angular", "Spring Boot", "Kafka", "PostgreSQL", "Docker"],
-        image: "expensetracker.png",
-        github: "#",
-        live: "#"
-      },
-      {
-        title: "ChatMate – AI Chatbot Platform",
-        description:
-          "End-to-end chatbot platform that integrates OpenAI APIs to provide conversational assistance, context retention, and prompt-driven workflows. The frontend is built using Next.js, while the Spring Boot backend handles authentication, rate-limiting, session management, and secure API orchestration.",
-        tech: ["Next.js", "Spring Boot", "OpenAI API", "PostgreSQL"],
-        image: "chatmate.png",
-        github: "#",
-        live: "#"
-      },
-      {
-        title: "Shortly – URL Shortener Service",
-        description:
-          "A scalable URL shortening application developed using Angular and Spring Boot, featuring analytics tracking, unique hash generation, redirect handling, and prevention of duplicate mappings. Designed with REST-based microservice architecture and database indexing for high-performance lookups.",
-        tech: ["Angular", "Spring Boot", "REST API", "PostGresSQL"],
-        image: "shortly.png",
-        github: "#",
-        live: "#"
-      },
-      {
-        title: "Personal Portfolio Website",
-        description:
-          "A modern, responsive portfolio website built using Next.js and Tailwind CSS, focused on performance, accessibility, and SEO optimization. Deployed on Vercel with CI-based build automation and production-ready routing and layout architecture.",
-        tech: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
-        image: "portfolio.png",
-        github: "https://github.com/kavinash0310/my-portfolio",
-        live: "https://avinash-kumar-portfolio.vercel.app/"
-      }
-    ];
+  {
+    title: 'Lugaire Management',
+    subtitle: 'E-commerce operations · In development',
+    category: 'management',
+    status: 'In progress',
+    description: 'A modular e-commerce management system covering catalog, inventory, orders, returns, suppliers, settlements, expenses, reporting, and authentication. The frontend uses Next.js and TypeScript; the backend is a Spring Boot modular monolith with PostgreSQL and Flyway.',
+    tech: ['Next.js', 'TypeScript', 'Spring Boot', 'PostgreSQL', 'Flyway'],
+    github: 'https://github.com/kavinash0310/Lugaire_Management',
+    live: null,
+  },
+  {
+    title: 'Lugaire Design System',
+    subtitle: 'Fashion storefront · Live concept',
+    category: 'storefront',
+    status: 'Live concept',
+    description: 'An editorial fashion storefront concept with product and brand pages, account screens, and responsive navigation. It is a front-end concept; backend, payment, inventory, and account integrations are not presented as production features.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    github: 'https://github.com/kavinash0310/lugaire-design-system',
+    live: 'https://lugaire-design-system.vercel.app',
+  },
+  {
+    title: 'Java Backend Interview Mastery',
+    subtitle: 'Structured interview preparation',
+    category: 'learning',
+    status: 'Learning resource',
+    description: 'A structured preparation library for Java backend and Java + Angular full-stack interviews, spanning fundamentals, Spring, data, security, messaging, coding, system design, frontend, and production scenarios.',
+    tech: ['Java', 'Spring Boot', 'SQL', 'Angular'],
+    github: 'https://github.com/kavinash0310/java-backend-interview-mastery',
+    live: null,
+  },
+  {
+    title: 'Personal Portfolio',
+    subtitle: 'Profile, experience & selected work',
+    category: 'portfolio',
+    status: 'Live',
+    description: 'This portfolio brings together my engineering experience, current projects, technical toolkit, and public coding profiles.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    github: 'https://github.com/kavinash0310/avinash-portfolio',
+    live: 'https://avinash-kumar-portfolio.vercel.app',
+  },
+];

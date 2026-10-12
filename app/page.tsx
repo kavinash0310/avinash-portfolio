@@ -148,7 +148,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className={`py-8 border-t ${borderClass} text-center ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        <p className="mb-2">© 2024 Avinash Kumar. Built with Next.js & Tailwind CSS</p>
+        <p className="mb-2">© {new Date().getFullYear()} Avinash Kumar. Built with Next.js & Tailwind CSS</p>
         <p className="text-sm">Crafted with 💙 and lots of ☕</p>
       </footer>
     </div>

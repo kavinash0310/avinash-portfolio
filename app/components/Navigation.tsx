@@ -112,7 +112,7 @@ export default function Navigation({
                   Avinash Kumar
                 </div>
                 <div className={`text-xs ${isDark ? "text-gray-400" : "text-gray-600"}`}>
-                  Full Stack Developer
+                  Java Backend Developer
                 </div>
               </div>
             </div>

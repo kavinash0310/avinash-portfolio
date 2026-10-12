@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Github, Linkedin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 interface ContactProps {
   isDark: boolean;
@@ -19,104 +19,99 @@ export default function Contact({
   formData,
   onFormChange,
   onSubmit,
-  isSubmitting = false
+  isSubmitting = false,
 }: ContactProps) {
+  const muted = isDark ? 'text-slate-400' : 'text-slate-600';
+
   return (
-    <section id="contact" className={`py-20 px-4 ${isDark ? 'bg-slate-900/50' : 'bg-gray-100'}`}>
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-5xl font-bold mb-4 text-center">
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Let's Connect
-          </span>
-        </h2>
-        <p className={`text-center ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-12`}>
-          Have a project in mind? Let's build something amazing together!
-        </p>
+    <section id="contact" className={'px-4 py-24 sm:px-6 ' + (isDark ? 'bg-slate-900/50' : 'bg-slate-100')}>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 max-w-2xl">
+          <p className="mb-3 font-mono text-sm uppercase tracking-[0.25em] text-blue-400">Get in touch</p>
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Let’s talk about what you’re building.</h2>
+          <p className={'mt-4 text-lg leading-8 ' + muted}>
+            For backend, full-stack, and product engineering opportunities, feel free to reach out.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
-
-          <a href="tel:+918210055755" className={`flex items-center space-x-4 p-5 ${cardBg} rounded-xl border ${borderClass} hover:scale-105 hover:border-green-500 transition-all shadow-lg group`}>
-              <div className="p-3 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
-                <Phone className="text-green-400" size={24} />
-              </div>
-            <div>
-            <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Phone</p>
-            <p className="font-semibold group-hover:text-green-400 transition-colors">+91 82100 55755</p>
-            </div>
-          </a>
-            
-            
-            <a href="mailto:avi.kr171@gmail.com" className={`flex items-center space-x-4 p-5 ${cardBg} rounded-xl border ${borderClass} hover:scale-105 hover:border-blue-500 transition-all shadow-lg group`}>
-              <div className="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
-                <Mail className="text-blue-400" size={24} />
-              </div>
-              <div>
-                <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Email</p>
-                <p className="font-semibold group-hover:text-blue-400 transition-colors">avi.kr1710@gmail.com</p>
-              </div>
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="space-y-4">
+            <a href="mailto:avi.kr1710@gmail.com" className={cardBg + ' flex items-center gap-4 rounded-2xl border ' + borderClass + ' p-5 transition hover:-translate-y-0.5'}>
+              <span className="rounded-xl bg-blue-500/10 p-3 text-blue-400"><Mail size={22} /></span>
+              <span>
+                <span className={'block text-sm ' + muted}>Email</span>
+                <span className="mt-1 block font-semibold">avi.kr1710@gmail.com</span>
+              </span>
             </a>
-
-            <a href="https://github.com/kavinash0310" target="_blank" rel="noopener noreferrer" className={`flex items-center space-x-4 p-5 ${cardBg} rounded-xl border ${borderClass} hover:scale-105 hover:border-purple-500 transition-all shadow-lg group`}>
-              <div className="p-3 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
-                <Github className="text-purple-400" size={24} />
-              </div>
-              <div>
-                <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>GitHub</p>
-                <p className="font-semibold group-hover:text-purple-400 transition-colors">github.com/kavinash0310</p>
-              </div>
+            <a href="https://github.com/kavinash0310" target="_blank" rel="noopener noreferrer" className={cardBg + ' flex items-center gap-4 rounded-2xl border ' + borderClass + ' p-5 transition hover:-translate-y-0.5'}>
+              <span className="rounded-xl bg-violet-500/10 p-3 text-violet-400"><Github size={22} /></span>
+              <span>
+                <span className={'block text-sm ' + muted}>GitHub</span>
+                <span className="mt-1 block font-semibold">github.com/kavinash0310</span>
+              </span>
             </a>
-
-            <a href="https://linkedin.com/in/kavinash0310" target="_blank" rel="noopener noreferrer" className={`flex items-center space-x-4 p-5 ${cardBg} rounded-xl border ${borderClass} hover:scale-105 hover:border-blue-500 transition-all shadow-lg group`}>
-              <div className="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
-                <Linkedin className="text-blue-400" size={24} />
-              </div>
-              <div>
-                <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>LinkedIn</p>
-                <p className="font-semibold group-hover:text-blue-400 transition-colors">linkedin.com/in/kavinash0310</p>
-              </div>
+            <a href="https://www.linkedin.com/in/kavinash0310/" target="_blank" rel="noopener noreferrer" className={cardBg + ' flex items-center gap-4 rounded-2xl border ' + borderClass + ' p-5 transition hover:-translate-y-0.5'}>
+              <span className="rounded-xl bg-sky-500/10 p-3 text-sky-400"><Linkedin size={22} /></span>
+              <span>
+                <span className={'block text-sm ' + muted}>LinkedIn</span>
+                <span className="mt-1 block font-semibold">linkedin.com/in/kavinash0310</span>
+              </span>
             </a>
           </div>
 
-          <div className={`${cardBg} p-8 rounded-2xl border ${borderClass} shadow-xl`}>
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <div className="space-y-4">
-              <div>
+          <div className={cardBg + ' rounded-2xl border ' + borderClass + ' p-6 shadow-xl sm:p-8'}>
+            <h3 className="text-xl font-bold">Send a message</h3>
+            <p className={'mt-2 text-sm ' + muted}>I’ll get back to you as soon as I can.</p>
+            <form onSubmit={onSubmit} className="mt-6 space-y-4">
+              <label className="block">
+                <span className="sr-only">Your name</span>
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  name="name"
+                  autoComplete="name"
+                  placeholder="Your name"
+                  required
+                  maxLength={100}
                   value={formData.name}
                   onChange={(e) => onFormChange('name', e.target.value)}
-                  className={`w-full px-4 py-3 ${isDark ? 'bg-slate-900 border-slate-700 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'} border rounded-lg focus:outline-none focus:border-blue-500 transition-colors`}
+                  className={'w-full rounded-xl border px-4 py-3 outline-none transition focus:border-blue-400 ' + (isDark ? 'border-slate-700 bg-slate-950 text-white placeholder:text-slate-500' : 'border-slate-300 bg-white text-slate-900 placeholder:text-slate-500')}
                 />
-              </div>
-              <div>
+              </label>
+              <label className="block">
+                <span className="sr-only">Your email</span>
                 <input
                   type="email"
-                  placeholder="Your Email"
+                  name="email"
+                  autoComplete="email"
+                  placeholder="Your email"
+                  required
+                  maxLength={254}
                   value={formData.email}
                   onChange={(e) => onFormChange('email', e.target.value)}
-                  className={`w-full px-4 py-3 ${isDark ? 'bg-slate-900 border-slate-700 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'} border rounded-lg focus:outline-none focus:border-blue-500 transition-colors`}
+                  className={'w-full rounded-xl border px-4 py-3 outline-none transition focus:border-blue-400 ' + (isDark ? 'border-slate-700 bg-slate-950 text-white placeholder:text-slate-500' : 'border-slate-300 bg-white text-slate-900 placeholder:text-slate-500')}
                 />
-              </div>
-              <div>
+              </label>
+              <label className="block">
+                <span className="sr-only">Your message</span>
                 <textarea
-                  rows={4}
-                  placeholder="Your Message"
+                  name="message"
+                  rows={5}
+                  placeholder="What would you like to discuss?"
+                  required
+                  maxLength={5000}
                   value={formData.message}
                   onChange={(e) => onFormChange('message', e.target.value)}
-                  className={`w-full px-4 py-3 ${isDark ? 'bg-slate-900 border-slate-700 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'} border rounded-lg focus:outline-none focus:border-blue-500 transition-colors resize-none`}
+                  className={'w-full resize-y rounded-xl border px-4 py-3 outline-none transition focus:border-blue-400 ' + (isDark ? 'border-slate-700 bg-slate-950 text-white placeholder:text-slate-500' : 'border-slate-300 bg-white text-slate-900 placeholder:text-slate-500')}
                 />
-              </div>
+              </label>
               <button
-                onClick={onSubmit}
+                type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className="w-full rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3.5 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Sending…' : 'Send message'}
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

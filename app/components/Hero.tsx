@@ -1,6 +1,7 @@
 'use client';
 
-import { ExternalLink, Terminal, Coffee } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowDown, ArrowUpRight, Download, Github, Linkedin } from 'lucide-react';
 
 interface HeroProps {
   isDark: boolean;
@@ -11,89 +12,102 @@ interface HeroProps {
 
 export default function Hero({ isDark, cardBg, borderClass, onSectionClick }: HeroProps) {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative px-4 pt-20">
-      <div className="max-w-5xl mx-auto text-center z-10">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-4 pb-16 pt-28 sm:px-6">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -right-40 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-violet-500/10 blur-3xl" />
+      </div>
 
-<a
-  href="#contact"
-  className="mb-8 inline-flex items-center space-x-2 animate-bounce cursor-pointer"
->
-  <Coffee className="text-blue-400" size={20} />
-  <span
-    className={`text-sm font-mono ${
-      isDark
-        ? 'bg-blue-400/10 text-blue-400 border-blue-400/20'
-        : 'bg-blue-100 text-blue-600 border-blue-200'
-    } px-4 py-2 rounded-full border hover:scale-105 transition-transform`}
-  >
-    Available for opportunities
-  </span>
-</a>
-        
-        <h1 className="text-6xl sm:text-8xl font-bold mb-6">
-          <span className="inline-block animate-pulse bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Crafting Digital
-          </span>
-          <br />
-          <span className="inline-block bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Experiences
-          </span>
-        </h1>
-        
-        <p className={`text-xl sm:text-2xl ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-12 max-w-3xl mx-auto leading-relaxed`}>
-          Full Stack Developer passionate about building scalable applications and solving complex engineering challenges.
-          <span className="block mt-2 text-lg">🚀 750+ Problems Solved</span>
-        </p>
-        
-        <div className="flex flex-wrap gap-4 justify-center">
-          <button
-            onClick={() => onSectionClick('projects')}
-            className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-semibold transition-all transform hover:scale-105 flex items-center space-x-2 shadow-lg hover:shadow-blue-500/50"
-          >
-            <span>Explore My Work</span>
-            <ExternalLink size={18} className="group-hover:rotate-12 transition-transform" />
-          </button>
-          <button
-            onClick={() => onSectionClick('coding')}
-            className={`px-8 py-4 ${isDark ? 'border-blue-400 hover:bg-blue-400/10' : 'border-blue-600 hover:bg-blue-50'} border-2 rounded-xl font-semibold transition-all flex items-center space-x-2`}
-          >
-            <Terminal size={18} />
-            <span>Coding Profiles</span>
-          </button>
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+        <div>
+          <div className={"mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm " + (isDark ? "border-emerald-400/20 bg-emerald-400/10 text-emerald-300" : "border-emerald-600/20 bg-emerald-50 text-emerald-700")}>
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            Open to Java backend and full-stack roles
+          </div>
+
+          <p className={"mb-3 font-mono text-sm uppercase tracking-[0.25em] " + (isDark ? "text-blue-300" : "text-blue-700")}>
+            Java · Spring Boot · Microservices
+          </p>
+          <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl xl:text-7xl">
+            Avinash Kumar
+            <span className="mt-3 block bg-gradient-to-r from-blue-400 via-violet-400 to-fuchsia-400 bg-clip-text text-3xl text-transparent sm:text-4xl xl:text-5xl">
+              Backend engineer building useful products.
+            </span>
+          </h1>
+          <p className={"mt-6 max-w-2xl text-lg leading-8 " + (isDark ? "text-slate-300" : "text-slate-600")}>
+            I bring three years of Java and Spring Boot experience from BFSI engineering at Nagarro, with hands-on work in APIs, security, service integrations, databases, and asynchronous processing.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <button
+              onClick={() => onSectionClick('projects')}
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-950/30 transition hover:-translate-y-0.5 hover:shadow-blue-500/25"
+            >
+              Explore projects <ArrowDown size={18} />
+            </button>
+            <a
+              href="/Avinash_Kumar.pdf"
+              download="Avinash_Kumar.pdf"
+              className={"inline-flex items-center gap-2 rounded-xl border px-6 py-3.5 font-semibold transition hover:-translate-y-0.5 " + (isDark ? "border-slate-700 bg-slate-900/50 hover:border-slate-500" : "border-slate-300 bg-white hover:border-slate-400")}
+            >
+              <Download size={18} /> Download résumé
+            </a>
+          </div>
+
+          <div className="mt-7 flex items-center gap-4">
+            <a href="https://github.com/kavinash0310" target="_blank" rel="noopener noreferrer" aria-label="Avinash Kumar on GitHub" className={"rounded-lg p-2 transition " + (isDark ? "text-slate-300 hover:bg-slate-800 hover:text-white" : "text-slate-600 hover:bg-slate-200 hover:text-slate-950")}>
+              <Github size={21} />
+            </a>
+            <a href="https://www.linkedin.com/in/kavinash0310/" target="_blank" rel="noopener noreferrer" aria-label="Avinash Kumar on LinkedIn" className={"rounded-lg p-2 transition " + (isDark ? "text-slate-300 hover:bg-slate-800 hover:text-white" : "text-slate-600 hover:bg-slate-200 hover:text-slate-950")}>
+              <Linkedin size={21} />
+            </a>
+            <a href="https://codolio.com/profile/kavinash" target="_blank" rel="noopener noreferrer" className={"inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm transition " + (isDark ? "text-slate-300 hover:bg-slate-800 hover:text-white" : "text-slate-600 hover:bg-slate-200 hover:text-slate-950")}>
+              Coding profiles <ArrowUpRight size={15} />
+            </a>
+          </div>
+
+          <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+            {[
+              { value: '3 yrs', label: 'BFSI engineering' },
+              { value: '799', label: 'questions on Codolio' },
+              { value: '1,737', label: 'CodeChef rating' },
+            ].map((item) => (
+              <div key={item.label} className={cardBg + ' rounded-xl border ' + borderClass + ' px-3 py-4 sm:px-4'}>
+                <div className="text-xl font-bold sm:text-2xl">{item.value}</div>
+                <div className={"mt-1 text-xs leading-5 sm:text-sm " + (isDark ? "text-slate-400" : "text-slate-600")}>{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="mt-16 flex flex-wrap justify-center gap-8">
-          <div className="animate-float" style={{ animationDelay: '0s' }}>
-            <div className={`${cardBg} p-4 rounded-2xl border ${borderClass} shadow-lg`}>
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">750+</div>
-              <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Problems Solved</div>
+        <div className="relative mx-auto w-full max-w-md">
+          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/30 via-violet-500/20 to-fuchsia-500/30 blur-xl" />
+          <div className={"relative overflow-hidden rounded-[1.75rem] border p-2 shadow-2xl " + borderClass + " " + (isDark ? "bg-slate-900" : "bg-white")}>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.35rem] bg-slate-200">
+              <Image
+                src="/profile.jpg"
+                alt="Portrait of Avinash Kumar"
+                fill
+                priority
+                sizes="(max-width: 1024px) 80vw, 420px"
+                className="object-cover object-center"
+              />
+            </div>
+            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-slate-950/75 p-4 text-white shadow-xl backdrop-blur-md">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-200">Engineer · Builder</p>
+              <p className="mt-1 text-lg font-semibold">Java, Spring Boot & product thinking</p>
             </div>
           </div>
-          <div className="animate-float" style={{ animationDelay: '0.5s' }}>
-            <div className={`${cardBg} p-4 rounded-2xl border ${borderClass} shadow-lg`}>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">20+</div>
-              <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Projects Built</div>
-            </div>
+          <div className={"absolute -left-8 top-12 hidden rounded-xl border px-4 py-3 shadow-xl sm:block " + cardBg + " " + borderClass}>
+            <p className="text-xs uppercase tracking-widest text-blue-400">Experience</p>
+            <p className="mt-1 font-semibold">Nagarro · Engineer</p>
           </div>
-          <div className="animate-float" style={{ animationDelay: '1s' }}>
-            <div className={`${cardBg} p-4 rounded-2xl border ${borderClass} shadow-lg`}>
-              <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">3★</div>
-              <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>CodeChef Rating</div>
-            </div>
+          <div className={"absolute -right-5 bottom-28 hidden rounded-xl border px-4 py-3 shadow-xl sm:block " + cardBg + " " + borderClass}>
+            <p className="text-sm font-semibold">Secure APIs</p>
+            <p className={"text-xs " + (isDark ? "text-slate-400" : "text-slate-600")}>JWT · OAuth 2.0</p>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }
