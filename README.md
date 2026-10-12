@@ -17,11 +17,13 @@ A personal portfolio for my Java backend and full-stack work. It brings together
 | Project | What it is | Links |
 |---|---|---|
 | Lugaire Management | In-progress e-commerce operations platform with a Next.js frontend, Spring Boot modular-monolith API, PostgreSQL, and Flyway. | [Source](https://github.com/kavinash0310/Lugaire_Management) |
-| Lugaire Design System | Live editorial fashion storefront concept. It is a frontend concept; integrations are not represented as production features. | [Source](https://github.com/kavinash0310/lugaire-design-system) · [Live](https://lugaire-design-system.vercel.app) |
+| Lugaire | Live fashion storefront concept with product, brand, and account pages. Backend, payment, and inventory integrations remain future work. | [Source](https://github.com/kavinash0310/lugaire-design-system) · [Live](https://lugaire-design-system.vercel.app) |
 | Java Backend Interview Mastery | Structured interview-preparation material for Java backend and Java + Angular roles. | [Source](https://github.com/kavinash0310/java-backend-interview-mastery) |
 | Personal Portfolio | This site, built with Next.js, React, TypeScript, and Tailwind CSS. | [Source](https://github.com/kavinash0310/avinash-portfolio) · [Live](https://avinash-kumar-portfolio.vercel.app) |
 
 ## Coding profiles
+
+Profile links are the source for current counts and ratings; I avoid copying values here because they change over time.
 
 - [Codolio](https://codolio.com/profile/kavinash)
 - [LeetCode](https://leetcode.com/u/kavinash0310/)

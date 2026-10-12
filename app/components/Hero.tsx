@@ -66,18 +66,7 @@ export default function Hero({ isDark, cardBg, borderClass, onSectionClick }: He
             </a>
           </div>
 
-          <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
-            {[
-              { value: '3 yrs', label: 'BFSI engineering' },
-              { value: '799', label: 'questions on Codolio' },
-              { value: '1,737', label: 'CodeChef rating' },
-            ].map((item) => (
-              <div key={item.label} className={cardBg + ' rounded-xl border ' + borderClass + ' px-3 py-4 sm:px-4'}>
-                <div className="text-xl font-bold sm:text-2xl">{item.value}</div>
-                <div className={"mt-1 text-xs leading-5 sm:text-sm " + (isDark ? "text-slate-400" : "text-slate-600")}>{item.label}</div>
-              </div>
-            ))}
-          </div>
+
         </div>
 
         <div className="relative mx-auto w-full max-w-md">
@@ -93,18 +82,6 @@ export default function Hero({ isDark, cardBg, borderClass, onSectionClick }: He
                 className="object-cover object-center"
               />
             </div>
-            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-slate-950/75 p-4 text-white shadow-xl backdrop-blur-md">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-200">Engineer · Builder</p>
-              <p className="mt-1 text-lg font-semibold">Java, Spring Boot & product thinking</p>
-            </div>
-          </div>
-          <div className={"absolute -left-8 top-12 hidden rounded-xl border px-4 py-3 shadow-xl sm:block " + cardBg + " " + borderClass}>
-            <p className="text-xs uppercase tracking-widest text-blue-400">Experience</p>
-            <p className="mt-1 font-semibold">Nagarro · Engineer</p>
-          </div>
-          <div className={"absolute -right-5 bottom-28 hidden rounded-xl border px-4 py-3 shadow-xl sm:block " + cardBg + " " + borderClass}>
-            <p className="text-sm font-semibold">Secure APIs</p>
-            <p className={"text-xs " + (isDark ? "text-slate-400" : "text-slate-600")}>JWT · OAuth 2.0</p>
           </div>
         </div>
       </div>

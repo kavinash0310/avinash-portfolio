@@ -27,6 +27,10 @@ const Skills = ({ isDark, cardBg, borderClass }: SkillsProps) => {
           </span>
         </h2>
 
+        <p className={`mx-auto -mt-6 mb-12 max-w-3xl text-center leading-7 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+          Java and Spring are my professional focus. Frontend and platform entries are labeled where they reflect project work or working knowledge.
+        </p>
+
         <div className="space-y-12">
           <SkillGroup
             title="Backend"

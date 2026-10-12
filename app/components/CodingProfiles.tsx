@@ -17,7 +17,7 @@ export default function CodingProfiles({ isDark, cardBg, borderClass }: CodingPr
           <p className="mb-3 font-mono text-sm uppercase tracking-[0.25em] text-blue-400">Practice & progress</p>
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Coding profiles</h2>
           <p className={'mt-4 text-lg leading-8 ' + (isDark ? 'text-slate-400' : 'text-slate-600')}>
-            A snapshot of my problem-solving activity. Open a profile for the latest results.
+            My practice changes over time, so open each profile to see its current counts, ratings, and activity.
           </p>
         </div>
 
@@ -45,9 +45,6 @@ export default function CodingProfiles({ isDark, cardBg, borderClass }: CodingPr
             </a>
           ))}
         </div>
-        <p className={'mt-5 text-xs ' + (isDark ? 'text-slate-500' : 'text-slate-500')}>
-          Ratings and counts are profile snapshots and may change over time.
-        </p>
       </div>
     </section>
   );
